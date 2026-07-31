@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Adeoye Precious logo</title>
+  <defs>
+    <linearGradient id="logo-surface" x1="8" y1="5" x2="56" y2="59" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#343433"/>
+      <stop offset="1" stop-color="#121212"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="18" fill="url(#logo-surface)"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="17.5" fill="none" stroke="#ffffff" stroke-opacity=".18"/>
+  <path
+    d="M19.5 47V17.5h13.25C41.55 17.5 47 22.2 47 29.75S41.55 42 32.75 42H23"
+    fill="none"
+    stroke="#fbfaf9"
+    stroke-width="6.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="38.5" cy="29.75" r="4.25" fill="#0086fc"/>
+  <circle cx="48" cy="19" r="3" fill="#ff3e00"/>
+</svg>
