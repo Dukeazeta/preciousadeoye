@@ -2340,16 +2340,72 @@ ul {
   .work-layout,
   .experience-layout,
   .footer-cta {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .profile-story-stage,
   .skill-accordion {
     grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
   }
 
   .profile-story-stage {
     max-width: 760px;
+  }
+
+  .skill-accordion {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    border-radius: 22px;
+  }
+
+  .skill-panel,
+  .skill-panel--active {
+    grid-column: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .skill-panel-button,
+  .skill-panel:not(.skill-panel--active) .skill-panel-button {
+    min-height: 78px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 15px 18px;
+  }
+
+  .skill-panel:not(.skill-panel--active) .skill-panel-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .skill-panel-toggle,
+  .skill-panel:not(.skill-panel--active) .skill-panel-toggle {
+    margin-inline-start: auto;
+  }
+
+  .skill-panel-content {
+    display: none;
+    width: 100%;
+    min-width: 0;
+    gap: 22px;
+    overflow: visible;
+    padding: 0 18px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+  }
+
+  .skill-panel--active .skill-panel-content {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .skill-panel-content > p {
+    max-width: 46ch;
   }
 
   .work-heading,
@@ -2538,61 +2594,6 @@ ul {
 
   .profile-layout {
     margin-block-start: 50px;
-  }
-
-  .skill-accordion {
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    border-radius: 22px;
-  }
-
-  .skill-panel,
-  .skill-panel--active {
-    grid-column: 1;
-    min-height: auto;
-  }
-
-  .skill-panel-button,
-  .skill-panel:not(.skill-panel--active) .skill-panel-button {
-    min-height: 78px;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 15px 18px;
-  }
-
-  .skill-panel:not(.skill-panel--active) .skill-panel-title {
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
-
-  .skill-panel-toggle,
-  .skill-panel:not(.skill-panel--active) .skill-panel-toggle {
-    margin-inline-start: auto;
-  }
-
-  .skill-panel-content {
-    min-width: 0;
-    max-height: 0;
-    gap: 22px;
-    overflow: hidden;
-    padding: 0 18px;
-    transform: translateY(-8px);
-    transition:
-      max-height 350ms var(--ease-out),
-      padding 350ms var(--ease-out),
-      opacity 220ms ease,
-      transform 300ms var(--ease-out),
-      visibility 220ms;
-  }
-
-  .skill-panel--active .skill-panel-content {
-    max-height: 320px;
-    padding: 2px 18px 24px;
-    transform: translateY(0);
-  }
-
-  .skill-panel-content > p {
-    max-width: 46ch;
   }
 
   .work-heading {
